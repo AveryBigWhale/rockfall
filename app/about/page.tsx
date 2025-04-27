@@ -5,7 +5,7 @@ import React from 'react';
 
 import banner from '../../public/banner-about.png';
 
-import peace from '../../public/banner.png';
+// import peace from '../../public/banner.png';
 
 export default function About() {
   return (

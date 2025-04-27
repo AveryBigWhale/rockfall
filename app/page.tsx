@@ -1,9 +1,9 @@
 "use client";
 
-import Hero from '@/components/Hero'
-// import Header from '@/components/Header'
-import DonateSection from '@/components/DonateSection'
-// import Footer from '@/components/Footer'
+// import Hero from '@/components/Hero'
+// // import Header from '@/components/Header'
+// import DonateSection from '@/components/DonateSection'
+// // import Footer from '@/components/Footer'
 
 import Link from 'next/link';
 import Image from "next/image"; // Add StaticImageData import
@@ -11,7 +11,7 @@ import Image from "next/image"; // Add StaticImageData import
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from 'swiper/modules';
 import newsData from '@/app/news/newsData.json';
-import policyData from '@/app/policy/policyData.json';
+// import policyData from '@/app/policy/policyData.json';
 import banner from "../public/banner.png"; // 新增導入
 // import 'swiper/css';
 import "swiper/swiper-bundle.css";

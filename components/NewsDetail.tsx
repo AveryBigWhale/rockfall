@@ -95,7 +95,7 @@ const NewsDetail = ({ id, }: Props) => {
               <h1 className="text-gray-800 text-2xl mt-6 font-bold">{subtitle}</h1>
               {newsItem.texts[index] && (
                 <p className="text-gray-800 text-md font-normal leading-relaxed mt-6">
-                  {newsItem.texts[index].split('\n').map((line, lineIndex) => (
+                  {(newsItem.texts[index] as string).split('\n').map((line, lineIndex) => (
                     <span key={lineIndex}>
                       {line}
                       <br />

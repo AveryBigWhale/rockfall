@@ -6,9 +6,9 @@ import Image from 'next/image';
 import ImageLoader from '@/components/ImageLoader'; // Adjust the path as necessary
 
 
-import policy1 from '@/public/school.png';
-import policy2 from '@/public/school.png';
-import policy3 from '@/public/school.png';
+import policy1 from '@/public/default.png';
+import policy2 from '@/public/default.png';
+import policy3 from '@/public/default.png';
 // import policy4 from '../../public/school.png';
 
 const newsImages = [policy1, policy2, policy3];
