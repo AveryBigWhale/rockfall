@@ -6,13 +6,13 @@ import ImageLoader from '../components/ImageLoader';
 
 export default function Navigation() {
     // const navItems = [
-    //     { name: '關於我們', href: '/ufoundation/about' },
-    //     // { name: '專案計畫', href: '/ufoundation/projects' },
-    //     { name: '最新消息', href: '/ufoundation/news' },
+    //     { name: '關於我們', href: '/rockfall/about' },
+    //     // { name: '專案計畫', href: '/rockfall/projects' },
+    //     { name: '最新消息', href: '/rockfall/news' },
     // ]
     const navItems = [
         { name: '關於落石黨', href: '/about' },
-        // { name: '專案計畫', href: '/ufoundation/projects' },
+        // { name: '專案計畫', href: '/rockfall/projects' },
         { name: '最新動態', href: '/news' },
     ]
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function Navigation() {
     };
   
     return (
-    <header className="relative bg-ufoundationLightMain flex">
+    <header className="relative bg-rockfallLightMain flex">
 
         <div className="container mx-auto flex justify-between items-center px-6">
             <Link href="/" className="text-2xl font-bold text-primary">
@@ -44,9 +44,9 @@ export default function Navigation() {
             </Link>
             
     
-            <nav className={`md:flex ${isOpen ? 'flex' : 'hidden'} md:static bg-ufoundationLightMain`}>
+            <nav className={`md:flex ${isOpen ? 'flex' : 'hidden'} md:static bg-rockfallLightMain`}>
                     
-                <ul className="flex flex-col  md:flex-row space-x-6 bg-ufoundationLightMain ml-auto">
+                <ul className="flex flex-col  md:flex-row space-x-6 bg-rockfallLightMain ml-auto">
                 {/* <ul className="flex flex-col md:flex-row space-y-2 md:space-x-4 text-intertidalDarkMain p-4"> */}
                     {navItems.map((item) => (
                         <li key={item.name}>
