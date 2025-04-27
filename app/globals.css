@@ -10,8 +10,10 @@
 }
 
 @theme {
-  --color-rockfallDarkMain: #0A3E44;
+  --color-ufoundationDarkMain: #0A3E44;
+  
   --color-rockfallLightMain: #E4F1A7;
+  --color-ufoundationLightMain: #E4F1A7;
   --color-customRed: #EE551D;
   /* --color-customPurple: #290484; */
 }
