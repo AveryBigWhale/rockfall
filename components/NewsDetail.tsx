@@ -6,10 +6,10 @@ import newsData from '@/app/news/newsData.json';
 // import policyData from '@/app/policy/policyData.json';
 import Image from 'next/image';
 import ImageLoader from './ImageLoader'; // Adjust the path as necessary
-import news1 from '../public/gala.png';
-import news2 from '../public/school.png';
-import news3 from '../public/lecture.png';
-import news4 from '../public/medicine.png';
+import news1 from '../public/address1.png';
+import news2 from '../public/sun-grass-kids.png';
+import news3 from '../public/walking.png';
+import news4 from '../public/address1.png';
 
 
 // import policy1 from '../public/education.png';

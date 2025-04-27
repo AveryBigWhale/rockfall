@@ -3,12 +3,12 @@
 /**
  * @type {import('next').NextConfig}
  */
-const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   reactStrictMode: true,
   
-  basePath: isProd ? '/ufoundation' : '',
+  // basePath: isProd ? '/ufoundation' : '',
   // output: 'export',
   distDir: 'dist',
   

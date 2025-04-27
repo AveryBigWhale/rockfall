@@ -4,10 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import world from '../../public/world.png'
-import news1 from '@/public/gala.png';
-import news2 from '@/public/school.png';
-import news3 from '@/public/lecture.png';
-import news4 from '@/public/medicine.png';
+import news1 from '../../public/address1.png';
+import news2 from '../../public/sun-grass-kids.png';
+import news3 from '../../public/walking.png';
 
 import newsData from './newsData.json';
 
@@ -20,7 +19,7 @@ import newsData from './newsData.json';
 //   url: string;
 // }
 
-const newsImages = [news1, news2, news3, news4];
+const newsImages = [news1, news2, news3];
 
 export default function NewsPage() {
   
@@ -46,47 +45,38 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* News Grid */}
-      <section className="py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {/* {newsItems.map((news, index) => (
-              <Link key={index} className="group" href={news.url}> */}
-            {newsData.map((news, index) => (
-              <Link key={index} className="group" href={`/news/${news.id}`}>
 
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-                    <Image
-                      
-                      src={newsImages[news.id -1]}
-                      // src={news.imageUrl}
-                      alt={news.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-  
-                    />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  
-                    <div className="absolute inset-0 flex flex-col justify-end p-6">
-                    {/* <div className="absolute inset-0 p-6 flex flex-col justify-end"> */}
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-sm text-gray-600">{news.category}</span>
-                        <span className="text-gray-300">|</span>
-                        <span className="text-sm text-gray-600">{news.region}</span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary-light transition-colors">
-                        {news.title}
-                      </h3>
-                      <p className="text-sm text-white/60">{news.date}</p>
-                    </div>
+      <section className="py-12">
+        <div className="container mx-auto px-6 space-y-8">
+          {newsData.map((news, index) => (
+            <Link key={index} href={`/news/${news.id}`} className="block">
+              <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                {/* 左側圖片 */}
+                <div className="relative w-full md:w-1/4 h-60 md:h-auto">
+                  <Image
+                    src={newsImages[news.id - 1]}
+                    alt={news.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
+
+                {/* 右側文字 */}
+                <div className="flex flex-col justify-between p-6 md:w-3/4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-3">{news.title}</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
+                      {news.description.join(' ').slice(0, 100)}...
+                    </p>
+                  </div>
+                  <p className="text-gray-400 text-xs mt-4">{news.date}</p>
                 </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
+
     </div>
   );
 }

@@ -7,10 +7,25 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Organization Info */}
+
+          <div className="flex flex-col  items-center justify-center">
+            <div className="relative w-36 h-36 rounded-full overflow-hidden"
+                style={{
+                backgroundImage: `url(${ImageLoader({ src: '/emblem.svg' })})`,
+                backgroundSize: 'cover',
+                // // backgroundSize: `${windowSize.width}px ${windowSize.height}px`,
+                backgroundPosition: 'center',
+            }} />
+            <h3 className="text-3xl font-bold">
+              落石黨
+            </h3>
+          </div>
+
+
           <div className="space-y-4 flex flex-col items-center ">
-            <h3 className="text-xl font-bold">U Foundation</h3>
+            <h3 className="text-xl font-bold">Rockfall Party</h3>
             <p className="text-gray-400">
-              支持 U 人社群，創造公平正義的世界
+              與自然同行，為人心守望
             </p>
           </div>
 
@@ -20,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  關於我們
+                  關於落石黨
                 </Link>
               </li>
               {/* <li>
@@ -31,21 +46,13 @@ export default function Footer() {
               
               <li>
                 <Link href="/news" className="text-gray-400 hover:text-white transition-colors">
-                  最新消息
+                  最新動態
                 </Link>
               </li>
             </ul>
           </div>
             
-          <div className="flex justify-end">
-            <div className="mr-2 relative w-36 h-36 rounded-full overflow-hidden shadow-lg"
-                style={{
-                backgroundImage: `url(${ImageLoader({ src: '/icon.svg' })})`,
-                backgroundSize: 'cover',
-                // // backgroundSize: `${windowSize.width}px ${windowSize.height}px`,
-                backgroundPosition: 'center',
-            }} />
-          </div>
+          
             
 
           {/* Contact Info */}

@@ -12,11 +12,7 @@ export const metadata: Metadata = {
   // description: 'Charitable Foundation Website',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-TW">
       <head>
@@ -28,8 +24,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* <p>Hello</p> */}
         <Header />
-        <main className="pt-20">{children}</main>
+        <main className="pt-20">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
