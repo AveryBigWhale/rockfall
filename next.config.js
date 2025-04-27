@@ -6,9 +6,12 @@
 const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
-  basePath: isProd ? '/rockfall' : '',
-  output: 'export',
+  reactStrictMode: true,
+  
+  basePath: isProd ? '/ufoundation' : '',
+  // output: 'export',
   distDir: 'dist',
+  
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
   
