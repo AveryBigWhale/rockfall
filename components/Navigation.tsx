@@ -79,8 +79,8 @@ import ImageLoader from '../components/ImageLoader';
 
 export default function Navigation() {
     const navItems = [
-        { name: '關於落石黨', href: '/about' },
-        { name: '最新動態', href: '/news' },
+        { name: '關於落石黨', href: '/rockfall/about' },
+        { name: '最新動態', href: '/rockfall/news' },
     ]
     const [isOpen, setIsOpen] = useState(false);
 
